@@ -3,10 +3,11 @@
 This module defines a Rectangle class with width and height properties.
 """
 
+
 class Rectangle:
     """
     A Rectangle class with private width and height attributes.
-    
+
     Attributes:
         __width (int): Private width of the rectangle
         __height (int): Private height of the rectangle
@@ -93,7 +94,7 @@ class Rectangle:
         Calculate the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle, or 0 if either width or 
+            int: The perimeter of the rectangle, or 0 if either width or
             height is 0
         """
         if self.__width == 0 or self.__height == 0:
@@ -106,7 +107,7 @@ class Rectangle:
         with `#` characters.
 
         Returns:
-            str: The rectangle as a string with `#` characters, or an empty 
+            str: The rectangle as a string with `#` characters, or an empty
             string if either width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
@@ -115,11 +116,11 @@ class Rectangle:
 
     def __repr__(self):
         """
-        String representation of the rectangle to recreate a new instance 
+        String representation of the rectangle to recreate a new instance
         using eval().
 
         Returns:
-            str: A string representation of the rectangle, e.g., 
+            str: A string representation of the rectangle, e.g.,
             Rectangle(2, 4)
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
