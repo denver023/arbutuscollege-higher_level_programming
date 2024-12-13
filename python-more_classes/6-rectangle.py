@@ -4,7 +4,6 @@ This module defines a Rectangle class with width and height properties and
 tracks the number of instances of the Rectangle class.
 """
 
-
 class Rectangle:
     """
     A Rectangle class with private width and height attributes and class
