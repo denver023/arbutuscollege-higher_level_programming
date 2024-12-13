@@ -5,6 +5,7 @@ It also includes validation for the 'size' attribute to ensure it is an integer
 and greater than or equal to zero.
 """
 
+
 class Square:
     """
     A class that represents a square.
