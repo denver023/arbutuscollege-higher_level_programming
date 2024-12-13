@@ -124,9 +124,9 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Return a string representation that can be used to recreate the object.
+        Return a string representation of the object.
 
         Returns:
-            str: A string representation of the Rectangle object
+            str: A string representation showing the object's class and memory location
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"<3-rectangle.Rectangle object at 0x{id(self):x}>"
