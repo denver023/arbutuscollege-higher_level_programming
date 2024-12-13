@@ -94,7 +94,8 @@ class Rectangle:
         Calculate the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle, or 0 if either width or height is 0
+            int: The perimeter of the rectangle, or 0 if either width or 
+            height is 0
         """
         if self.__width == 0 or self.__height == 0:
             return 0
@@ -106,8 +107,8 @@ class Rectangle:
         with `#` characters.
 
         Returns:
-            str: The rectangle as a string with `#` characters, or an empty string
-            if either width or height is 0.
+            str: The rectangle as a string with `#` characters, or an empty 
+            string if either width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -115,9 +116,11 @@ class Rectangle:
 
     def __repr__(self):
         """
-        String representation of the rectangle to recreate a new instance using eval().
+        String representation of the rectangle to recreate a new instance 
+        using eval().
 
         Returns:
-            str: A string representation of the rectangle, e.g., Rectangle(2, 4)
+            str: A string representation of the rectangle, e.g., 
+            Rectangle(2, 4)
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
