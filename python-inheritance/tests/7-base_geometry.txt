@@ -1,4 +1,4 @@
->>> from base_geometry import BaseGeometry
+>>> from 7-base_geometry import BaseGeometry
 >>> bg = BaseGeometry()
 >>> isinstance(bg, BaseGeometry)
 True
