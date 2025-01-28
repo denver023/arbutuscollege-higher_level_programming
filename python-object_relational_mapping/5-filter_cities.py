@@ -49,8 +49,9 @@ def filter_cities_by_state():
     # Print the cities in the required format
     if results:
         cities = [row[0] for row in results]
-        cities_str = ", ".join(cities)
-        print(cities_str)
+        # Split the print line to avoid exceeding 79 characters
+        print(", ".join(
+            cities))  # The join is done in a way to not exceed line length limit
     else:
         print()
 
