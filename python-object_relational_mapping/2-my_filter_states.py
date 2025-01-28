@@ -6,8 +6,10 @@ Script that filters states by user input.
 import MySQLdb
 import sys
 
+
 def main():
     """Main entry point of the script."""
+
     # Check if the script is being executed directly
     if len(sys.argv) != 5:
         return
@@ -29,7 +31,9 @@ def main():
     cursor = db.cursor()
 
     # Create and execute the query using format
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    query = (
+        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    )
     cursor.execute(query)
 
     # Fetch all results and print them
@@ -41,5 +45,6 @@ def main():
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
-    main() 
+    main()
