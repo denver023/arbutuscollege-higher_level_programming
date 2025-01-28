@@ -48,7 +48,8 @@ def filter_cities_by_state():
 
     # Print the cities in the required format
     if results:
-        print(", ".join([row[0] for row in results]))
+        cities = [row[0] for row in results]
+        print(", ".join(cities))
     else:
         print()
 
