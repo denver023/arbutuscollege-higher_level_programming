@@ -1,50 +1,45 @@
 #!/usr/bin/python3
 """
-Script that displays all values in the states table
-where name matches the argument
+Script that filters states by user input.
 """
+
 import MySQLdb
 import sys
 
+def main():
+    """Main entry point of the script."""
+    # Check if the script is being executed directly
+    if len(sys.argv) != 5:
+        return
 
-def filter_states_by_input(username, password, db_name, state_name):
-    """
-    Lists all states where name matches the argument
-    Args:
-        username (str): MySQL username
-        password (str): MySQL password
-        db_name (str): Database name
-        state_name (str): Name of state to search for
-    """
-    # Connect to MySQL server
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+    state_name = sys.argv[4]
+
+    # Connect to the MySQL database
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
-        db=db_name
+        user=mysql_username,
+        passwd=mysql_password,
+        db=database_name
     )
 
-    # Create cursor to execute queries
     cursor = db.cursor()
 
-    # Create and execute query using format
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-    cursor.execute(query.format(state_name))
+    # Create and execute the query using format
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(query)
 
-    # Fetch all results
-    states = cursor.fetchall()
+    # Fetch all results and print them
+    results = cursor.fetchall()
+    for row in results:
+        print(row)
 
-    # Print results
-    for state in states:
-        print(state)
-
-    # Close cursor and database connection
+    # Close the cursor and the connection
     cursor.close()
     db.close()
 
-
 if __name__ == "__main__":
-    if len(sys.argv) == 5:
-        filter_states_by_input(sys.argv[1], sys.argv[2],
-                                sys.argv[3], sys.argv[4])
+    main() 
