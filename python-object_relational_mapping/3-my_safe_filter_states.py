@@ -8,11 +8,14 @@ where name matches the argument. It is safe from SQL injection.
 import MySQLdb
 import sys
 
+
 def safe_filter_states():
     """Connect to MySQL, execute a safe query, and display the results."""
+
     # Ensure we have the correct number of arguments
     if len(sys.argv) != 5:
-        print("Usage: ./3-my_safe_filter_states.py <mysql username> <mysql password> <database name> <state name>")
+        print("Usage: ./3-my_safe_filter_states.py <mysql username> "
+              "<mysql password> <database name> <state name>")
         return
 
     # Get arguments from command line
@@ -22,7 +25,8 @@ def safe_filter_states():
     state_name = sys.argv[4]
 
     # Connect to the MySQL server
-    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_user, passwd=mysql_password, db=database)
+    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_user,
+                         passwd=mysql_password, db=database)
 
     # Create a cursor to execute the query
     cursor = db.cursor()
@@ -43,6 +47,7 @@ def safe_filter_states():
     # Close the cursor and the database connection
     cursor.close()
     db.close()
+
 
 # Ensure the script only runs when executed directly, not when imported
 if __name__ == "__main__":
