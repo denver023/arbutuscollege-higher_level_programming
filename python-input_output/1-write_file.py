@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This module provides a function to write a string to a text file in UTF-8 encoding.
+"""
+
 def write_file(filename="", text=""):
     """
     Writes a string to a text file (UTF8) and returns the number of characters written.
