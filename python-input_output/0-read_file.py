@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module provides a function to read and print the content of a text file.
+"""
 
 def read_file(filename=""):
     """
@@ -12,6 +15,3 @@ def read_file(filename=""):
     """
     with open(filename, mode='r', encoding='utf-8') as file:
         print(file.read(), end='')
-
-# Example usage:
-# read_file("my_file_0.txt")
