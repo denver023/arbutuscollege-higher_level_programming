@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Script that lists all cities from the database hbtn_0e_4_usa, sorted by cities.id.
-It takes 3 arguments: mysql username, mysql password, and database name.
+Script that lists all cities from the database hbtn_0e_4_usa,
+sorted by cities.id. It takes 3 arguments: mysql username, mysql
+password, and database name.
 """
 
 import MySQLdb
