@@ -32,7 +32,8 @@ def main():
 
     # Create and execute the query using format
     query = (
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+        "SELECT * FROM states WHERE name = '{}' "
+        "ORDER BY id ASC".format(state_name)
     )
     cursor.execute(query)
 
