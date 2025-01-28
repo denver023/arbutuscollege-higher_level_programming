@@ -31,7 +31,10 @@ def main():
     cursor = db.cursor()
 
     # Create and execute the query using parameterized input to prevent SQL injection
-    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
+    query = (
+        "SELECT * FROM states WHERE BINARY name = %s "
+        "ORDER BY id ASC"
+    )
     cursor.execute(query, (state_name,))
 
     # Fetch all results and print them
