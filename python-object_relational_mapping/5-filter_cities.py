@@ -11,7 +11,7 @@ import sys
 
 def filter_cities_by_state():
     """Connect to MySQL, execute the query, and display the results."""
-    
+
     # Ensure we have the correct number of arguments
     if len(sys.argv) != 5:
         print("Usage: ./5-filter_cities.py <mysql username> <mysql password> "
@@ -60,4 +60,3 @@ def filter_cities_by_state():
 # Ensure the script only runs when executed directly, not when imported
 if __name__ == "__main__":
     filter_cities_by_state()
-
