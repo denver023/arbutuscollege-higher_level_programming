@@ -30,9 +30,9 @@ def main():
 
     cursor = db.cursor()
 
-    # Create and execute the query using format
+    # Create and execute the query using BINARY for case-sensitive matching
     query = (
-        "SELECT * FROM states WHERE name = '{}' "
+        "SELECT * FROM states WHERE BINARY name = '{}' "
         "ORDER BY id ASC".format(state_name)
     )
     cursor.execute(query)
