@@ -46,5 +46,5 @@ def filter_states_by_input(username, password, db_name, state_name):
 
 if __name__ == "__main__":
     if len(sys.argv) == 5:
-        filter_states_by_input(sys.argv[1], sys.argv[2], 
-                             sys.argv[3], sys.argv[4])
+        filter_states_by_input(sys.argv[1], sys.argv[2],
+                                sys.argv[3], sys.argv[4])
