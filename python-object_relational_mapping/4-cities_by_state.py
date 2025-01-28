@@ -10,10 +10,11 @@ import sys
 
 def list_cities_by_state():
     """Connect to MySQL, execute the query, and display the results."""
-    
+
     # Ensure we have the correct number of arguments
     if len(sys.argv) != 4:
-        print("Usage: ./4-cities_by_state.py <mysql username> <mysql password> <database name>")
+        print("Usage: ./4-cities_by_state.py <mysql username> "
+              "<mysql password> <database name>")
         return
 
     # Get arguments from command line
